@@ -1,3 +1,3 @@
-[submodule "april_tag"]
-	path = ../../.gazebo/april_tag
-url = git@github.com:cirpote/april_tag.git
+[submodule "../../../.gazebo/april_tag"]
+	path = ../../../.gazebo/april_tag
+	url = git@github.com:cirpote/april_tag.git
