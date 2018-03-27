@@ -80,7 +80,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='marker'>
+    <model name='april_tag'>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
@@ -113,9 +113,9 @@
           </geometry>
           <material>
             <script>
-              <uri>model://marker/materials/scripts</uri>
-              <uri>model://marker/materials/textures</uri>
-              <name>vrc/marker</name>
+              <uri>model://april_tag/materials/scripts</uri>
+              <uri>model://april_tag/materials/textures</uri>
+              <name>vrc/april_tag</name>
             </script>
           </material>
         </visual>
@@ -140,7 +140,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='marker'>
+      <model name='april_tag'>
         <pose frame=''>9 0 1.5 1.57 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
