@@ -711,9 +711,9 @@
       </visual>
 
       <inertial>
-        <mass value="0.13" />
+        <mass value="1e-7" />
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+        <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7" />
       </inertial>
     </link>
     <joint name="${namespace}_vi_sensor_joint" type="fixed">
@@ -754,7 +754,7 @@
         odometry_topic="odometry"
         parent_frame_id="world"
         child_frame_id="${namespace}/base_link"
-        mass_odometry_sensor="0.00001"
+        mass_odometry_sensor="1e-7"
         measurement_divisor="1"
         measurement_delay="0"
         unknown_delay="0.0"
@@ -769,7 +769,7 @@
         enable_odometry_map="false"
         odometry_map=""
         image_scale="">
-        <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" /> <!-- [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] -->
+        <inertia ixx="1e-7" ixy="0.0" ixz="0.0" iyy="1e-7" iyz="0.0" izz="1e-7" /> <!-- [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] -->
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
       </xacro:odometry_plugin_macro>
     </xacro:if>
@@ -780,7 +780,7 @@
       imu_suffix=""
       parent_link="${namespace}/vi_sensor_link"
       imu_topic="imu"
-      mass_imu_sensor="0.015"
+      mass_imu_sensor="1e-7"
       gyroscope_noise_density="0.0003394"
       gyroscope_random_walk="0.000038785"
       gyroscope_bias_correlation_time="1000.0"
@@ -789,7 +789,7 @@
       accelerometer_random_walk="0.006"
       accelerometer_bias_correlation_time="300.0"
       accelerometer_turn_on_bias_sigma="0.1960">
-      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+      <inertia ixx="1e-7" ixy="0.0" ixz="0.0" iyy="1e-7" iyz="0.0" izz="1e-7" />
       <origin xyz="0.015 0 0.0113" rpy="0 0 0" />
     </xacro:imu_plugin_macro>
   </xacro:macro>
