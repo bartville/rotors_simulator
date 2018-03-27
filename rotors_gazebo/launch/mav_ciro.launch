@@ -28,51 +28,10 @@
 
   </group>
 
-<!--
-    <node name="pid_controller_node" pkg="pid_neo_controller" type="pid_controller" respawn="true" clear_params="true" output="screen">
-      <rosparam file="$(find pid_neo_controller)/parameters/params.yaml" />
-      <rosparam file="$(find pid_neo_controller)/parameters/params_ibvs.yaml" />
-    </node>
--->
-
-<!--
-    <node name="optimal_ibvs" pkg="optimal_visual_servoing" type="ibvs" respawn="true" clear_params="true" output="screen">
-      <rosparam file="$(find optimal_visual_servoing)/parameters/params_ibvs.yaml" />
-    </node>
--->
-
-<!--
-    <node name="nl_node" pkg="optimal_visual_servoing" type="nl_node" respawn="true" clear_params="true" output="screen">
-      <rosparam file="$(find optimal_visual_servoing)/parameters/params_ibvs.yaml" />
-    </node>
--->
-
-<!--
-    <node name="pid_node" pkg="optimal_path_planner_node" type="pid_node" respawn="true" clear_params="true" output="screen">
-      <rosparam file="$(find optimal_path_planner_node)/parameters/params.yaml" />
-    </node>
--->
-
-    <!--node name="optimal_path_planner_node" pkg="optimal_path_planner_node" type="random_path_planner" respawn="true" clear_params="true" output="screen"/-->
-
-
     <node name="low_level_controller" pkg="rotors_control" type="roll_pitch_yawrate_thrust_controller_node" respawn="true" clear_params="true" output="screen">
       <remap from="odometry" to="firefly/ground_truth/odometry" />
       <remap from="command/motor_speed" to="firefly/command/motor_speed" />
     </node>
-
-<!--
-    <node name="mav_attitude_control" pkg="mav_lowlevel_attitude_controller" type="mav_pid_attitude_controller_node" respawn="true" clear_params="true" output="screen">
-      <remap from="odometry" to="firefly/ground_truth/odometry" />
-      <remap from="command/roll_pitch_yawrate_thrust" to="command/roll_pitch_yawrate_thrust" />
-      <remap from="command/motor_speed" to="firefly/command/motor_speed" />
-      <rosparam file="$(find mav_lowlevel_attitude_controller)/resources/PID_attitude_firefly.yaml" />
-    </node>
--->
-
-    <!--node name="viewer_node" pkg="image_view" type="image_view" args=" image:=/firefly/vi_sensor/left/image_raw"  respawn="true" clear_params="true" output="screen"/-->
-
-    <node name="rosbag_record_node" pkg="rosbag" type="record" output="screen" args="-a"/>
 
 </launch>
 
